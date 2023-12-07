@@ -97,7 +97,7 @@ const redraw = () => {
     }
 
     // Iterate for 10ms
-    // About 30k steps is feasible on a Apple M1
+    // About 30k steps is feasible on an Apple M1
     const steps = 100;
     const start = performance.now();
     while (performance.now() - start < 10) {
