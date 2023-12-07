@@ -31,23 +31,23 @@ const c = -2.21;
 const d = 1.79;
 
 // Helper function to multiply two complex numbers
-function multiplyComplex([ar, ai], [br, bi]) {
+const multiplyComplex = ([ar, ai], [br, bi]) => {
     return [(ar * br - ai * bi), (ar * bi + ai * br)];
 }
 
 // Helper function to divide two complex numbers
-function divideComplex([ar, ai], [br, bi]) {
+const divideComplex = ([ar, ai], [br, bi]) => {
     const denom = br * br + bi * bi;
     return [((ar * br + ai * bi) / denom), ((ai * br - ar * bi) / denom)];
 }
 
 // Helper function to calculate exp(i * theta)
-function expi(theta) {
+const expi = (theta) => {
     return [Math.cos(theta), Math.sin(theta)];
 }
 
 // Define your complex function
-function complexFunction([zReal, zImag], n) {
+const complexFunction = ([zReal, zImag], n) => {
     // Calculate the numerator and the denominator as complex numbers
     const numerator = [a * zReal + b, a * zImag];
     const denominator = [c * zReal + d, c * zImag];
